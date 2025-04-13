@@ -1,22 +1,27 @@
 ## The Console
 # Task 1
 1: Enter the command or sequence of commands that returned the required logs:
-grep -R "^233.201." ~/logs/2019/12
+## grep -R "^233.201." ~/logs/2019/12
 
 2: Show the results of your search:
+
 /home/morty/logs/2019/12/apache_2019-12-18.txt:233.201.188.154 - - [18/12/2019:21:46:01 +0000] "DELETE /events HTTP/1.1" 403 3971
+
 /home/morty/logs/2019/12/apache_2019-12-21.txt:233.201.182.9 - - [21/12/2019:21:56:20 +0000] "PATCH /users HTTP/1.1" 400 4118
 
 # Task 2
 1: Enter the commands you used to create the /bug1 and /events directories: 
+
 mkdir ~/bug1
 mkdir ~/bug1/events
 
 2: Enter the commands you used to select logs for the specified periods. These are the requests that you use to select logs for the main.txt file:
+
 ls ~/logs/2019/12
 grep " [45]00 " ~/logs/2019/12/apache_2019-12-30.txt > ~/bug1/main.txt
 
 3:  Enter the commands that you used to put logs from the main.txt file into the 400.txt and 500.txt files:
+
 grep " 400 " ~/bug1/main.txt > ~/bug1/events/400.txt
 grep " 500 " ~/bug1/main.txt > ~/bug1/events/500.txt
 
