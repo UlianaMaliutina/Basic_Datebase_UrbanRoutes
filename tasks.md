@@ -59,7 +59,9 @@ F: The last 3 lines from 500.txt. Use tail -3 ~/bug1/events/500.txt to get the a
 Please specify the number of cars: 5500
 The query that you used to find the number of cars:
 
-SELECT COUNT(DISTINCT vehicle_id) AS car_numb FROM cabs;
+SELECT 
+COUNT(DISTINCT vehicle_id) 
+AS car_numb FROM cabs;
 
 # Task 4
 List of companies with fewer than 100 cars:
@@ -118,4 +120,11 @@ List of companies with fewer than 100 cars:
  3011 - 66308 JBL Cab Inc.                    |   1
 
 The query that you used to generate the list of companies above:
-SELECT company_name, COUNT(vehicle_id) AS cnt FROM cabs GROUP BY company_name HAVING COUNT(vehicle_id) < 100 ORDER BY cnt DESC;
+SELECT 
+company_name, 
+COUNT(vehicle_id) AS cnt 
+FROM cabs 
+GROUP BY company_name 
+HAVING COUNT(vehicle_id) < 100 
+ORDER BY 
+cnt DESC;
